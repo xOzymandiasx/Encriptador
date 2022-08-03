@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+:root {
+  font-family: 'Indie Flower', cursive;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.divImg {
+  width: 100vw;
+  height: 4rem;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #1a2c42;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 0px 50px 50px;
+  border: 0.5px solid black;
+}
+
+.flecha {
+  width: 20rem;
+}
+
+.contenedor {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contentEnd, .divResultado, .divFinal {
+    height: 33rem;
+    width: 23rem;
+    padding: 2rem;
+    background-color: #272727;
+    border-radius: 50px;
+    transition: ease-in-out 200ms;
+}
+
+.contentEnd {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.divEncriptador {
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  align-items: center;
+}
+
+.divResultado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2, p {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+input, button {
+  font-family: 'Indie Flower', cursive;
+  font-weight: 500;
+}
+
+input {
+  font-size: 1.2rem;
+  width: 18.2rem;
+  height: 2rem;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+input:focus {
+  background-color: #21af79;
+  color: #fff;
+}
+
+input:focus::placeholder{
+  color: #fff;
+}
+
+input:focus-visible {
+  outline: 2px solid #21af7974;
+}
+
+button {
+  font-size: 1.2rem;
+  width: 9rem;
+  height: 2.5rem;
+  border-radius: 15px;
+  background-color: #04192f;
+  color: #fff;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #21af79;
+  transition: ease-in-out 250ms;
+}
+
+.searchImg {
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 1rem;
+}
+
+.divFinal {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 4rem;
+}
+
+.resultado {
+  font-size: 1.2rem;
+}
+
+.asterisco {
+  color: red;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 1110px) {
+  :root {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1040px) {
+  :root {
+    font-size: 15px;
+  }
+}
