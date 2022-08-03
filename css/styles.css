@@ -138,11 +138,21 @@ button:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  row-gap: 4rem;
 }
 
 .resultado {
   font-size: 1.2rem;
+  width: 20rem;
+  height: 10rem;
+  text-align: center;
+  background-color: #272727;
+  color: #fff;
+  border: none;
+  resize: none;
+}
+
+.resultado:focus-visible {
+  outline: none;
 }
 
 .asterisco {

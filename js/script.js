@@ -27,7 +27,7 @@ const decodePalabra = (palabra) => {
 };
 
 const copyToClipboard = () => {
-    let contenido = document.querySelector(".resultado").textContent;
+    let contenido = document.querySelector(".resultado").value;
     if (navigator && navigator.clipboard && navigator.clipboard.writeText)
         return navigator.clipboard.writeText(contenido);
     return Promise.reject('The Clipboard API is not available.');
@@ -46,7 +46,7 @@ document.addEventListener("click", (e) => {
         } else {
             document.querySelector(".divResultado").style.display = "none";
             document.querySelector(".divFinal").style.display = "flex";
-            document.querySelector(".resultado").textContent = codearPalabra(entrada);
+            document.querySelector(".resultado").value = codearPalabra(entrada);
             document.querySelector("input").value = "";     
 
         };
@@ -57,7 +57,7 @@ document.addEventListener("click", (e) => {
         let entrada = document.querySelector("input").value;
         document.querySelector(".divResultado").style.display = "none";
         document.querySelector(".divFinal").style.display = "flex";
-        document.querySelector(".resultado").textContent = decodePalabra(entrada);
+        document.querySelector(".resultado").value = decodePalabra(entrada);
         document.querySelector("input").value = "";
     };
 
