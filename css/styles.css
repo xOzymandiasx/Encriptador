@@ -84,7 +84,7 @@ h2, p {
   margin-bottom: 0.5rem;
 }
 
-input, button {
+input, button, .resultado {
   font-family: 'Indie Flower', cursive;
   font-weight: 500;
 }
