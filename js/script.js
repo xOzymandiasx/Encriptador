@@ -41,8 +41,8 @@ document.addEventListener("click", (e) => {
         e.preventDefault();
         let entrada = document.querySelector("input").value;
         let filtro = /[^a-z\s]+/g
-        if (entrada.match(filtro) || entrada === "") {alert("Sólo letras minúsculas")
-   
+        if (entrada.match(filtro) || entrada === "") {
+            alert("Sólo letras minúsculas");  
         } else {
             document.querySelector(".divResultado").style.display = "none";
             document.querySelector(".divFinal").style.display = "flex";

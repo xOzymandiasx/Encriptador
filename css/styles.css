@@ -7,14 +7,14 @@
 }
 
 :root {
-  font-family: 'Indie Flower', cursive;
   font-size: 17px;
-  font-weight: 500;
 }
 
 body {
   background-color: #1e1e1e;
   color: #fff;
+  font-family: 'Indie Flower', cursive;
+  font-weight: 500;
 }
 
 .divImg {
