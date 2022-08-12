@@ -15,6 +15,7 @@ body {
   color: #fff;
   font-family: 'Indie Flower', cursive;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 .divImg {
@@ -160,13 +161,132 @@ button:hover {
   margin-right: 0.5rem;
 }
 
-@media (max-width: 1110px) {
+@media (width <= 1110px) {
   :root {
     font-size: 16px;
   }
 }
-@media (max-width: 1040px) {
+@media (width <= 1040px) {
   :root {
     font-size: 15px;
   }
 }
+
+@media (width <= 1000px) {
+  .flecha {
+    display: none;
+  }
+}
+
+@media (width <= 768px) {
+  :root {
+    font-size: 17px;
+  }
+
+  .contenedor,.contentEnd {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    height: unset;
+    padding: 1rem;
+  }
+  
+  .contenedor {
+    margin-top: 1rem;
+    padding: 0px;
+  }
+  .divEncriptador {
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divResultado{
+  display: flex;
+  height: initial;
+  width: 35rem;
+  padding: initial;
+}
+
+.divFinal {
+  display: none;
+  justify-content: initial;
+  width: 35rem;
+  padding: 1rem;
+  height: initial;
+}
+
+.resultado {
+  width: 30rem;
+  height: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+.searchImg {
+  display: none;
+}
+
+.btnContainer {
+  width: 32rem;
+}
+
+button {
+  width: 15rem;
+}
+}
+@media (width <= 616px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media (width <= 376px) {
+
+  :root {
+    font-size:17px;
+  }
+  
+  .contenedorBtns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    margin-bottom: 0.5rem;
+  }
+
+  .divResultado, .divFinal, .contentEnd, .btnContainer {
+    width: 18rem;
+  }
+
+  .resultado {
+    width: 15rem;
+  }
+  }
+ 
+  @media (width <= 314px) {
+    :root {
+      font-size:16px
+    }
+  }
+
+  @media (width <= 294px) {
+    :root {
+      font-size:15px
+    }
+  }
+
+  @media (width <= 276px) {
+    :root {
+      font-size:14px
+    }
+  }
+  @media (width <= 260px) {
+    :root {
+      font-size:13px
+    }
+  }

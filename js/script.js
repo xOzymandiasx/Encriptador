@@ -33,32 +33,37 @@ const copyToClipboard = () => {
     return Promise.reject('The Clipboard API is not available.');
     };    
 
-
+const apagoPrendo = (display1, display2) => {
+    document.querySelector(".divResultado").style.display = display1;
+    document.querySelector(".divFinal").style.display = display2;
+}
 
 document.addEventListener("click", (e) => {
     
     if (e.target.matches(".btnCript")) {
         e.preventDefault();
         let entrada = document.querySelector("input").value;
-        let filtro = /[^a-z\s]+/g
-        if (entrada.match(filtro) || entrada === "") {
+        
+        if (entrada.match(/[^a-z\s]+/g) || entrada === "") {
             alert("Sólo letras minúsculas");  
         } else {
-            document.querySelector(".divResultado").style.display = "none";
-            document.querySelector(".divFinal").style.display = "flex";
+            apagoPrendo("none", "flex")
             document.querySelector(".resultado").value = codearPalabra(entrada);
             document.querySelector("input").value = "";     
-
         };
     };
 
     if (e.target.matches(".btnDecript")) {
         e.preventDefault();
         let entrada = document.querySelector("input").value;
-        document.querySelector(".divResultado").style.display = "none";
-        document.querySelector(".divFinal").style.display = "flex";
-        document.querySelector(".resultado").value = decodePalabra(entrada);
-        document.querySelector("input").value = "";
+
+        if (entrada.match(/[^a-z\s]+/g) || entrada === "") {
+            alert("Sólo letras minúsculas");
+        } else {
+            apagoPrendo("none", "flex")
+            document.querySelector(".resultado").value = decodePalabra(entrada);
+            document.querySelector("input").value = "";
+        }
     };
 
     if (e.target.matches(".copiar")) {
